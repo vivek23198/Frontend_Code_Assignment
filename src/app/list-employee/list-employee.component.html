@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+
+<div class="row">
+
+<div class="col-6">
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">FirstName</th>
+            <th scope="col">LastName</th>
+            <th scope="col">Contact No</th>
+          </tr>
+        </thead>
+         <tbody>
+          <tr *ngFor="let data of EmployeeDataList; let i= index">
+            <td>{{data.firstName}}</td>
+            <td>{{data.lastName}}</td>
+            <td>{{data.contact}}</td>
+          </tr>
+        </tbody> 
+        
+      </table>
+</div>
+  
+      <div class="col-6">
+        <app-image-description></app-image-description>
+  </div>
+</div>
