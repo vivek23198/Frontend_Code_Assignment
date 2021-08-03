@@ -3,7 +3,7 @@
 <div class="col-9">
     <h3 class="text-center">Add Items</h3>
     <br><br><br>
-    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="employeeForm" >
         
         <div formArrayName="itemRows">
             <div *ngFor="let item of FormArrayData.controls;let i=index" [formGroupName]="i">
@@ -23,6 +23,7 @@
         <div class="col-2">
             <label for="contact">City</label><br>
             <select  name="cars" id="cars" height="20px" formControlName='city'>
+                <option selected disabled>Select City</option>
                 <option  *ngFor="let city of cityData">{{city}}</option>
                 
               </select>
